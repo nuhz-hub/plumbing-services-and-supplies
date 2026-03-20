@@ -1,72 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Reliable plumbing services and quality plumbing supplies. Call or WhatsApp us for fast service.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reliable plumbing services and quality plumbing supplies. Call or WhatsApp us for fast service."
+    />
+    <title>Plumbing Services & Supplies</title>
 
-  <title>Plumbing Services & Supplies</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-979697138"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-979697138");
+    </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-979697138"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-979697138');
-  </script>
+    <style>
+      /* General layout */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+      }
 
-  <style>
-    /* Simple styling for clean layout */
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #0077b6; color: white; text-align: center; padding: 2rem 1rem; }
-    header h1 { margin: 0; }
-    section { padding: 2rem 1rem; max-width: 800px; margin: auto; background: white; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-    .btn { display: inline-block; margin: 0.5rem; padding: 0.75rem 1.5rem; color: white; background: #0077b6; text-decoration: none; border-radius: 5px; }
-    .btn-whatsapp { background: #25D366; }
-    footer { text-align: center; padding: 1rem; background: #023e8a; color: white; }
-  </style>
-</head>
-<body>
+      html {
+        scroll-behavior: smooth;
+      }
 
-  <!-- Header / Hero -->
-  <header>
-    <h1>Reliable Plumbing Services & Supplies</h1>
-    <p>Fast, Affordable, Professional Plumbing Solutions</p>
-    <a class="btn" href="tel:+2348089120899">Call Now</a>
-    <a class="btn btn-whatsapp" href="https://wa.me/2348089120899" target="_blank">WhatsApp Us</a>
-  </header>
+      /* Header */
+      header {
+        background: #0077b6;
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+      header img {
+        width: 150px;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+      header h1 {
+        margin: 0;
+      }
 
-  <!-- Services -->
-  <section>
-    <h2>Our Services</h2>
-    <ul>
-      <li>Leak Repair</li>
-      <li>WC & Shower Installation</li>
-      <li>Pipe Replacement</li>
-      <li>Plumbing Supplies for Sale</li>
-    </ul>
-  </section>
+      /* Sections */
+      section {
+        padding: 2rem 1rem;
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
 
-  <!-- About / Why Choose Us -->
-  <section>
-    <h2>Why Choose Us</h2>
-    <p>We provide professional plumbing services with high-quality materials. Our experienced team ensures fast and reliable service at affordable prices.</p>
-  </section>
+      /* Buttons */
+      .btn,
+      .booking-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 0.5rem;
+        color: white;
+        background: #0077b6;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover,
+      .booking-btn:hover {
+        background-color: #005fa3;
+      }
+      .btn-whatsapp {
+        background: #25d366;
+      }
 
-  <!-- Contact -->
-  <section>
-    <h2>Contact Us</h2>
-    <p>Phone: <a href="tel:+2348089120899">+2348089120899</a></p>
-    <p>WhatsApp: <a href="https://wa.me/2348089120899" target="_blank">Chat with us</a></p>
-    <p>Email: <a href="mailto:plumbing@example.com">plumbing@example.com</a></p>
-    <p>Location: FCT Abuja, Nigeria</p>
-  </section>
+      /* Responsive booking button */
+      @media (max-width: 600px) {
+        .booking-btn {
+          width: 80%;
+          font-size: 18px;
+          padding: 14px;
+          text-align: center;
+        }
+      }
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 Plumbing Services & Supplies. All rights reserved.
-  </footer>
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #023e8a;
+        color: white;
+      }
 
-</body>
+      /* Confirmation message */
+      #confirmation {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header / Hero -->
+    <header>
+      <img src="logo.png" alt="Plumbing Services & Supplies Logo" />
+      <h1>Reliable Plumbing Services & Supplies</h1>
+      <p>Fast, Affordable, Professional Plumbing Solutions</p>
+      <a class="btn" href="tel:+2348089120899">Call Now</a>
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/2348089120899"
+        target="_blank"
+        >WhatsApp Us</a
+      >
+    </header>
+
+    <!-- Tagline -->
+    <div style="text-align: center; margin: 20px">
+      <h2>
+        Connecting homes with trusted plumbers and essential supplies — fast,
+        simple, reliable.
+      </h2>
+    </div>
+
+    <!-- Booking Button (Top) -->
+    <div style="text-align: center; margin-top: 30px">
+      <a href="#service-form" class="booking-btn">Book a Service</a>
+    </div>
+
+    <!-- Service Request Form -->
+    <section>
+      <h2>Request Plumbing Service</h2>
+      <form id="service-form" action="#" method="post">
+        <label for="name"><strong>Full Name:</strong></label
+        ><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="phone"><strong>Phone Number:</strong></label
+        ><br />
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+
+        <label for="location"><strong>Location:</strong></label
+        ><br />
+        <input type="text" id="location" name="location" required /><br /><br />
+
+        <label for="service"><strong>Service Needed:</strong></label
+        ><br />
+        <select id="service" name="service" required>
+          <option value="">-- Select a Service --</option>
+          <option value="leak-repair">Leak Repair</option>
+          <option value="wc-installation">WC Installation</option>
+          <option value="shower-installation">Shower Installation</option>
+          <option value="pipe-replacement">Pipe Replacement</option></select
+        ><br /><br />
+
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+      <div id="confirmation">
+        ✅ Thank you! Your booking request has been received.
+      </div>
+    </section>
+
+    <!-- Booking Button (Bottom) -->
+    <div style="text-align: center; margin-top: 30px">
+      <a href="#service-form" class="booking-btn">Book a Service</a>
+    </div>
+
+    <!-- Services -->
+    <section>
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Leak repair:</strong> Fast response to fix water leaks.</li>
+        <li>
+          <strong>WC & Shower Installation:</strong> Professional bathroom
+          fittings.
+        </li>
+        <li>
+          <strong>Pipe Replacement:</strong> Durable materials for long-lasting
+          plumbing.
+        </li>
+        <li>
+          <strong>Plumbing Supplies for Sale:</strong> Access to quality parts
+          and tools.
+        </li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section>
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li>
+          <strong>Professional Team:</strong> Skilled plumbers with hands-on
+          expertise.
+        </li>
+        <li>
+          <strong>High-Quality Materials:</strong> Ensures reliability and
+          durability.
+        </li>
+        <li>
+          <strong>Affordable Pricing:</strong> Competitive rates for services
+          and supplies.
+        </li>
+        <li>
+          <strong>Fast & Reliable Service:</strong> Quick turnaround for urgent
+          needs.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Contact Us</h2>
+      <p>Phone: <a href="tel:+2348089120899">+2348089120899</a></p>
+      <p>
+        WhatsApp:
+        <a href="https://wa.me/2348089120899" target="_blank">Chat with us</a>
+      </p>
+      <p>
+        Email:
+        <a href="mailto:plumbing.paintinghub@gmail.com"
+          >plumbing.paintinghub@gmail.com</a
+        >
+      </p>
+      <p>Location: FCT Abuja, Nigeria</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2026 Plumbing Services & Supplies. All rights reserved.
+    </footer>
+
+    <script>
+      document
+        .getElementById("service-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const confirmation = document.getElementById("confirmation");
+          confirmation.style.display = "block";
+          setTimeout(function () {
+            confirmation.style.display = "none";
+          }, 5000);
+        });
+    </script>
+    <!-- Back to Top Button -->
+    <div style="text-align: center; margin: 30px 0">
+      <a href="#top" class="back-to-top">⬆ Back to Top</a>
+    </div>
+  </body>
 </html>
